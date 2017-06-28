@@ -1,0 +1,21 @@
+Welcome to week 2 of Tech ready. Here are the assignments for this week. 
+These problems focus on array, sorting and searching and will help you learn those concepts.
+ 
+	1. Given an array which has only 0s and 1s in it, we will like you to write a program which outputs a sorted array.
+	 
+	Below is an example to demonstrate
+	Ex1. Input: {1,0,0,1,0,1,1}
+	     Output:{0,0,0,1,1,1,1}
+	 
+	Challenge is do it in place within the array, what does that means, 
+	that means that you will modify the elements in the same input array to transform it into the output array not creating a new one.
+	 
+	2. Given a sorted array and a number, write a program which outputs the index of the number in the array below are couple of examples to explain this.
+	 
+	Ex1. Input array A{4, 5, 6, 8, 9, 10} and number to find is 6, program should output that number 6 is available at 2nd index in the array
+	Ex2. Input array {3, 10, 12 , 15, 100} and number 3, program should output that number 3 is available at 0th index in the array
+	Ex3. Input array {3, 10, 12, 15, 100} and given number 14 program should output that number is not available in array
+	 
+	Hint: it is a Binary search problem, take a quick look at this stack overflow link https://stackoverflow.com/questions/249392/binary-search-in-array
+ 
+Please submit your solutions in github, if any issues send those via email. And as always please send your questions if you have any.

@@ -1,0 +1,28 @@
+Welcome to week 1 of Tech ready. Here are the assignments for this week. 
+These assignments can be attempted over 3 week period. 
+Assignment 1 
+Supports following functions
+·   Basic Operations (Additional, subtraction, division and multiplication)
+		o   E.g. double Add (double input1, double intput2) – a method that returns addition of two input numbers – why double?
+·       Implement methods here https://msdn.microsoft.com/en-us/library/system.math(v=vs.110).aspx for various data types
+		o   Abs
+		o   Ceiling
+		o   Max
+		o   Min
+		o   Round
+		o   Truncate
+		
+Assignment 2
+Implement addition and subtraction of two really large numbers
+		a. Create a BigNumber Class in Math library and implement these methods to allow addition and subtraction for numbers as long as 20 digits.
+		
+Assignment 3
+Expression Evaluator - Evaluate an expression represented by a string. Expression can contain parentheses, don’t assume that parentheses are well matched.
+		a. Start with binary operators only +,-,*,/
+		b. Use infix notation – this is how expressions are written and recognized and are input to your method
+		c. https://en.wikipedia.org/wiki/Shunting-yard_algorithmShunting and Yard algorithm
+ 
+Common
+A test project which calls methods in your library and tests against Math class in .net 
+
+Please submit your solutions in github, if any issues send those via email. And as always please send your questions if you have any.
