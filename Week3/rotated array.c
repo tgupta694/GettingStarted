@@ -30,41 +30,30 @@
   	 	 {
   	 	 	a=a+1; //count to determine the position of the largest number for the rotated array
   	 
-  	     }
+  	         }
   	 
-      }  
+          }  
+	       
 	        first=0; 
   	        last=a-1;
   	        middle=(first+last)/2;
   				
-  	
-      
-	
-    for(i=0;i<a;i++)   // binary search in 1st group 4 5 6 7 8 or 3 4 5
-  	 {
-  	   
-  	 	 
-  	 	
-  	 	    
-  	
-  	
-            while(first<=last)
+  	 for(i=0;i<a;i++)   // binary search in 1st group 4 5 6 7 8 or 3 4 5
+  	  {
+             while(first<=last)
   	         {
   	 	       if(arr[middle]<search)
   	 	        {
 		 	      first=middle+1;
-		
-  	            }
+		        }
   	 	
-	           else if(arr[middle]==search)
+	               else if(arr[middle]==search)
   	 	        {
 		          printf("%d found at index = %d \n",search,middle); 
 		          break;
-		        
-	            }
-	            
-	     
-		       else 
+		        }
+	              
+		      else 
 		       last=middle-1;
 		       middle=(first+last)/2;
 	
@@ -72,10 +61,7 @@
 	         
 	        if(first>last)
 	         b=1;
-	    
-  	
-  	 	 	
-	 }
+	  }
 	 
 	        first=a; 
   	        last=s-1;
@@ -85,22 +71,19 @@
 	 for(i=a;i<s;i++)   // binary search in second group 123 or 12
 	  {
 	  	
-	  	    
-  	
-            while(first<=last)
+	     while(first<=last)
   	         {
   	 	       if(arr[middle]<search)
   	 	        {
 		 	      first=middle+1;
-		
-  	            }
+	                }
   	 	
-	           else if(arr[middle]==search)
+	               else if(arr[middle]==search)
   	 	        {
 		          printf("%d found at index = %d \n",search,middle); 
 		          break;
 		    
-	            }
+	                }
 	     
 		       else 
 		       last=middle-1;
@@ -114,7 +97,8 @@
 	        if(first>last)
 	         c=1;
 	       
-  }
-  if((b==1)&&(c==1))
-  printf("number not found");
+        }
+  
+	 if((b==1)&&(c==1))
+         printf("number not found");
 }
