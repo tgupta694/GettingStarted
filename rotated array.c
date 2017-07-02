@@ -3,7 +3,7 @@
 
  void main()
   {
-  	int arr[10],s,search,a=0,first,last,middle,i;
+  	int arr[10],s,search,a=0,first,last,middle,i,b=0,c=0;
   	
   	//array input 
   	
@@ -33,7 +33,10 @@
   	     }
   	 
       }  
-				
+	        first=0; 
+  	        last=a-1;
+  	        middle=(first+last)/2;
+  				
   	
       
 	
@@ -42,10 +45,7 @@
   	   
   	 	 
   	 	
-  	 	    first=0; 
-  	        last=a-1;
-  	        middle=(first+last)/2;
-  	
+  	 	    
   	
   	
             while(first<=last)
@@ -60,6 +60,7 @@
   	 	        {
 		          printf("%d found at index = %d \n",search,middle); 
 		          break;
+		        
 	            }
 	            
 	     
@@ -69,21 +70,22 @@
 	
 	         }
 	         
-	    
+	        if(first>last)
+	         b=1;
 	    
   	
   	 	 	
 	 }
 	 
-	 
-	 for(i=a;i<s;i++)   // binary search in second group 123 or 12
-	  {
-	  	
-	  	    first=a; 
+	        first=a; 
   	        last=s-1;
   	        middle=(first+last)/2;
   	
   	
+	 for(i=a;i<s;i++)   // binary search in second group 123 or 12
+	  {
+	  	
+	  	    
   	
             while(first<=last)
   	         {
@@ -97,6 +99,7 @@
   	 	        {
 		          printf("%d found at index = %d \n",search,middle); 
 		          break;
+		    
 	            }
 	     
 		       else 
@@ -108,6 +111,10 @@
 	  	
 	         }
 	       
+	        if(first>last)
+	         c=1;
 	       
   }
+  if((b==1)&&(c==1))
+  printf("number not found");
 }
