@@ -21,11 +21,7 @@ using namespace std;
                }
      }
 
-     cout<<"sorted array is:"<<endl;;
-        for(int i=0;i<s;i++)
-     { cout<<" "<<arr[i];}
-
-  cout<<" and"<<k<<"th smallest element is:"<<arr[k-1];
+  cout<<k<<"th smallest element is:"<<arr[k-1];
 
     return 0;
     }
