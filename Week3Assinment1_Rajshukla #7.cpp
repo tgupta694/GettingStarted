@@ -1,36 +1,60 @@
 #include<iostream>
 using namespace std;
-
-    int main()
+int main()
+{
+   int arr[10],s,p,key,i,b=0,c=0,pos;
+   int found=0;
+   cout<<"enter size of array:";
+   cin>>s;
+   cout<<"enter array elements:";
+   for(i=0;i<s;i++)
     {
-        int arr[10],s,k,i,temp;
-     cout<<"enter array size:";
-      cin>>s;
-     cout<<"enter array elements:";
+       cin>>arr[i];
+    }
+
+     cout<<"\n enter key:";
+     cin>>key;
       for(i=0;i<s;i++)
-         { cin>>arr[i];}
+      {
+          if(arr[i+1]<arr[i])
+            p=arr[i];
+      }
 
-        for(i=1;i<s;i++)
-     {
-        for(int j=0;j<(s-i);j++)
-            if(arr[j]>arr[j+1])
-               {
-                  temp=arr[j];
-                  arr[j]=arr[j+1];
-                  arr[j+1]=temp;
-               }
-     }
 
-        cout<<"\n enter key:";
-         cin>>k;
-         for(i=0;i<s;i++)
+       for(i=0;i<p;i++)  //linear search for first group.
+           {
+             if(arr[i]==key)
+             {
+                 b=1;
+                 pos=i;
+                 break;
+             }
+           }
+
+           if(b==1)
+            {
+            cout<<"\n number found at position:"<<pos;
+            found++;
+            }
+
+         if(found==0)
          {
-      if(k==i)
-            cout<<" found at index:"<<arr[i];
-      else
-            cout<<"number not found at position "<<i<<",";
+
+        for(i=p;i<s;i++)  //linear search in second group
+        {
+            if(arr[i]==key)
+            {
+                c=1;
+                pos=i;
+                break;
+            }
+        }
+        if(c==1)
+        {
+            cout<<"number found at position:"<<pos;
+        }
          }
-
-
-    return 0;
-   }
+    if(b==0&&c==0)
+    cout<<"not found";
+         return 0;
+}
