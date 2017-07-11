@@ -30,10 +30,10 @@ int search(int a[],int i,int j,int x)
 		    cout<<"available at loc"<<mid+1;
 		    return 0;
 		}
-		if((a[i]>a[mid-1])&&((x>=a[i])||(x<=a[mid-1]))) search(a,i,mid-1,x);
-	    else	if((a[mid+1]>a[j])&&((x>=a[mid+1])||(x<=a[j]))) search(a,mid+1,j,x);
-		else if((a[i]<=a[mid-1])&&((x<=a[mid-1])&&(x>=a[i]))) binsearch(a,i,mid-1,x);
-		else if((a[mid+1]<=a[j])&&((x>=a[mid+1])&&(x<=a[j]))) binsearch(a,mid+1,j,x);
+		if((a[i]>a[mid-1])&&((x>=a[i])||(x<=a[mid-1]))) search(a,i,mid-1,x); //first half of array is rotated and element is in between first half
+	    else	if((a[mid+1]>a[j])&&((x>=a[mid+1])||(x<=a[j]))) search(a,mid+1,j,x); //other half of array is rotated and element is in between this part
+		else if((a[i]<=a[mid-1])&&((x<=a[mid-1])&&(x>=a[i]))) binsearch(a,i,mid-1,x);//if first half is sorted and element lies in it
+		else if((a[mid+1]<=a[j])&&((x>=a[mid+1])&&(x<=a[j]))) binsearch(a,mid+1,j,x);//if other half is sorted and element lies in it
 		else 
 		{
 			cout<<"Not found";
